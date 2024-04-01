@@ -1,9 +1,11 @@
 class Consola :EntradaSalida {
     override fun mostrar(mensj: String, salto: Boolean) {
-        TODO("Not yet implemented")
+        if (salto) print(mensj)
+        else println(mensj)
     }
 
     override fun pedirNum(mensj: String) {
-        TODO("Not yet implemented")
+        print(mensj)
+        val num = readLine()?.toIntOrNull()
     }
 }
