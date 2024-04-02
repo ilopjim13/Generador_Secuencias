@@ -4,8 +4,12 @@ class Consola :EntradaSalida {
         else println(mensj)
     }
 
-    override fun pedirNum(mensj: String) {
-        print(mensj)
-        val num = readLine()?.toIntOrNull()
+    override fun pedirNum(mensj: String):Int {
+        var num:Int
+        do {
+            print(mensj)
+            num = readLine()?.toIntOrNull() ?: -1
+        } while (num == -1)
+        return num
     }
 }
