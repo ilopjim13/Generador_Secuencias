@@ -8,7 +8,8 @@ class GeneradorSecuencias(private val consola:EntradaSalida) {
         var palabras = ""
         sec = lineSequence(num)
         sec.forEach {
-            palabras += "$it "
+            palabras += if (it.isEmpty()) " $it"
+            else it
             consola.mostrar(palabras) }
     }
 
